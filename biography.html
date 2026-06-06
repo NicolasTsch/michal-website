@@ -22,15 +22,31 @@
       top: calc(var(--nav-height) + 2rem);
     }
 
+    .bio-sidebar__img-wrap {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-sidebar__img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -1.2rem;
+      left: -1.2rem;
+      width: 55%;
+      height: 55%;
+      border: 2px solid var(--blue-light);
+      z-index: -1;
+    }
+
     .bio-sidebar img {
       width: 100%;
       aspect-ratio: 3/4;
       object-fit: cover;
-      margin-bottom: 1.5rem;
+      display: block;
     }
 
     .bio-awards {
-      background: var(--blue-pale);
+      background: var(--cream-dark);
       padding: 1.5rem;
       border-left: 3px solid var(--blue-light);
     }
@@ -74,7 +90,7 @@
       text-transform: uppercase;
       color: var(--accent);
       padding-top: 1.5rem;
-      border-top: 1px solid var(--cream-dark);
+      border-top: 1px solid var(--blue-light);
       margin-top: 0.5rem;
     }
 
@@ -85,6 +101,7 @@
       }
       .bio-sidebar { position: static; }
       .bio-sidebar img { aspect-ratio: 4/3; max-height: 480px; object-position: top; }
+      .bio-sidebar__img-wrap::after { display: none; }
     }
   </style>
 </head>
@@ -122,11 +139,13 @@
 
         <!-- Sidebar -->
         <div class="bio-sidebar fade-in">
-          <img
-            src="images/bio-portrait.jpg"
-            alt="Michal Oren — conductor portrait"
-            loading="lazy"
-          />
+          <div class="bio-sidebar__img-wrap">
+            <img
+              src="images/bio-portrait.jpg"
+              alt="Michal Oren — conductor portrait"
+              loading="lazy"
+            />
+          </div>
 
           <div class="bio-awards">
             <h4>Selected Awards</h4>

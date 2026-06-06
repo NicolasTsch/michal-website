@@ -93,7 +93,7 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 .section--dark .eyebrow { color: var(--accent-light); }
 
 .section--mid {
-  background-color: var(--blue-pale);
+  background-color: var(--cream-dark);
 }
 
 .grid-2 {
@@ -787,7 +787,6 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 /* ── Page Hero (inner pages) ────────────────────────────────── */
 .page-hero {
   background: var(--dark);
-  border-bottom: 3px solid var(--blue-light);
   padding-top: calc(var(--nav-height) + 4rem);
   padding-bottom: 4rem;
   text-align: center;
