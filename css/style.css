@@ -297,20 +297,21 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  height: 100vh;
-  min-height: 600px;
+  height: 115vh;
+  min-height: 650px;
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-}
-
-.hero__bg {
-  position: absolute;
-  inset: 0;
   background-color: var(--dark-mid);
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  /* background-attachment: fixed is broken on iOS Safari */
+  .hero { background-attachment: scroll; }
 }
 
 .hero__overlay {
@@ -404,11 +405,11 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 }
 
 .banner-strip__text {
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.05em;
   color: var(--accent);
 }
 
@@ -592,13 +593,13 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 .section--dark .event-date .month { color: rgba(246,238,227,0.6); }
 
 .event-info h3 {
-  font-size: 1.15rem;
+  font-size: 1.35rem;
   font-weight: 500;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .event-info .venue {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--text-muted);
 }
 
@@ -813,14 +814,10 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   font-weight: 300;
   font-style: italic;
   color: var(--cream);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0;
 }
 
-.footer__brand p {
-  font-size: 0.85rem;
-  color: rgba(246,238,227,0.6);
-  line-height: 1.7;
-}
+.footer__brand p { display: none; }
 
 .footer__col h4 {
   font-family: var(--font-body);
