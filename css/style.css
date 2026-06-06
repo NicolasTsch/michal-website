@@ -294,42 +294,63 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   margin-top: 1.2rem;
 }
 
-/* ── Achievements Strip ─────────────────────────────────────── */
-.strip {
+/* ── Banner Strip ───────────────────────────────────────────── */
+.banner-strip {
   background: var(--accent);
-  padding: 1rem 0;
-  overflow: hidden;
+  padding: 0.75rem 0;
 }
 
-.strip__track {
+.banner-strip__inner {
+  width: min(var(--container), 100% - 3rem);
+  margin-inline: auto;
   display: flex;
-  gap: 3rem;
   align-items: center;
-  white-space: nowrap;
-  animation: marquee 30s linear infinite;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.strip__item {
+.banner-strip__left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.banner-strip__logo {
+  height: 30px;
+  width: auto;
+}
+
+.banner-strip__text {
   font-family: var(--font-body);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--white);
-  flex-shrink: 0;
 }
 
-.strip__dot {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.6);
-  flex-shrink: 0;
+.banner-strip__sep {
+  width: 1px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.45);
 }
 
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.banner-strip__right a {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.banner-strip__right a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.banner-strip__right svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* ── Highlight Cards ────────────────────────────────────────── */
