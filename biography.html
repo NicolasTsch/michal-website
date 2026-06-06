@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Biography of Michal Oren — conductor, Classic FM 2026 Rising Star." />
+  <title>Biography — Michal Oren</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    .bio-layout {
+      display: grid;
+      grid-template-columns: 380px 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .bio-sidebar {
+      position: sticky;
+      top: calc(var(--nav-height) + 2rem);
+    }
+
+    .bio-sidebar img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-awards {
+      background: var(--cream-dark);
+      padding: 1.5rem;
+      border-left: 3px solid var(--accent);
+    }
+
+    .bio-awards h4 {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .bio-awards ul { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .bio-awards li {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .bio-awards li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .bio-content { display: flex; flex-direction: column; gap: 1.8rem; }
+
+    .bio-content p { font-size: 1.02rem; line-height: 1.85; }
+
+    .bio-section-title {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--cream-dark);
+      margin-top: 0.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .bio-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .bio-sidebar { position: static; }
+      .bio-sidebar img { aspect-ratio: 4/3; max-height: 480px; object-position: top; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Michal Oren</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="past-events.html">Past Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="musical-curation.html">Musical Curation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HERO ═══════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>Biography</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════ BIO CONTENT ═══════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="bio-layout">
+
+        <!-- Sidebar -->
+        <div class="bio-sidebar fade-in">
+          <img
+            src="images/bio-portrait.jpg"
+            alt="Michal Oren — conductor portrait"
+            loading="lazy"
+          />
+          <!-- TO DO: Replace with your preferred portrait photo -->
+
+          <div class="bio-awards">
+            <h4>Selected Awards</h4>
+            <ul>
+              <li>Classic FM Rising Star 2026</li>
+              <li>1st Prize — Estoril, 2023</li>
+              <li>2nd Prize — Koussevitzky, 2025</li>
+              <li>2nd Prize — Almería, 2023</li>
+              <li>Concours de Genève Semi-Finalist 2026</li>
+              <li>Bianca Falcone Sorrell Award — RAM</li>
+              <li>Victor &amp; Lilian Hochhauser Scholar — RCM</li>
+              <li>America-Israel Cultural Foundation Scholar (since 2015)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Main text -->
+        <div class="bio-content fade-in">
+          <p>
+            Michal Oren, named a <strong>Classic FM 2026 Rising Star</strong>, is a conductor whose
+            work is shaped by a deep sense of narrative and musical imagination. Originally from
+            Tel-Aviv, Israel, she was recently announced as the next <strong>Calleva Assistant
+            Conductor of the Bournemouth Symphony Orchestra</strong> (2026–2027). She is also one
+            of six semi-finalists in the upcoming <strong>80th Concours de Genève Conducting
+            Competition</strong> in November 2026.
+          </p>
+          <p>
+            Recently she joined the one-year <strong>Taki Alsop Conducting Fellowship</strong>
+            Mentoring Programme and will join the renowned <strong>Gstaad Conducting Academy</strong>
+            in summer 2026, where she will receive lessons from Jaap van Zweden, Johannes Schlaefli
+            and Alexander Shelley. Previously, Michal held the <strong>Female Conductor Trainee</strong>
+            position at Opera North in Leeds, UK (2024–2025).
+          </p>
+
+          <p class="bio-section-title">Competitions &amp; Programmes</p>
+
+          <p>
+            Michal won <strong>1st prize in the 4th International Academy and Competition of
+            Orchestra Conducting in Estoril, Portugal</strong> (2023) and 2nd prizes in the
+            5th Koussevitzky Conducting Competition in Grosseto, Italy (2025) and in the
+            3rd International Orchestral Conducting Competition "Universidad de Almería",
+            Spain (2023).
+          </p>
+          <p>
+            In 2024, she joined the two-year <strong>Women Conductors' Programme of the Royal
+            Philharmonic Society</strong> with the Royal Northern Sinfonia, led by Alice Farnham,
+            and participated in the <strong>Young Conductors Showcase with the BBC Scottish
+            Symphony Orchestra</strong> in Glasgow. Michal was the Residence Music Scholar of
+            the <strong>Robert Anderson Trust</strong> (2022–2025), and since 2015 is a scholar
+            of the <strong>America-Israel Cultural Foundation</strong>.
+          </p>
+          <p>
+            Michal participated in masterclasses with world-renowned conductors including
+            Daniele Gatti, Andrew Davis, Vasily Petrenko, Sakari Oramo, Nicolas Pasquet,
+            Mark Stringer, Pascal Rophé and Lahav Shani.
+          </p>
+
+          <p class="bio-section-title">Education</p>
+
+          <p>
+            Recently, Michal completed her <strong>Professional Diploma in Conducting at the
+            Royal Academy of Music</strong> in London with a full scholarship under conductor
+            Sian Edwards, holding the <strong>Bianca Falcone Sorrell Award</strong>. Previously,
+            she earned her <strong>Master's Degree in Orchestral Conducting from the Royal
+            College of Music</strong>, supported by a full scholarship as a Victor and Lilian
+            Hochhauser Scholar.
+          </p>
+          <p>
+            She was awarded distinction for her two <strong>Bachelors of Music</strong> in
+            orchestral conducting and clarinet performance from the Buchmann-Mehta School of
+            Music at Tel Aviv University. Among Michal's teachers are conductors Sian Edwards,
+            Martyn Brabbins, Toby Purser, Peter Stark, Howard Williams, Yi-An Xu, Doron
+            Salomon, Dale Lonis, and IPO principal clarinettist Yevgeny Yehudin.
+          </p>
+
+          <p class="bio-section-title">Musical Curation</p>
+
+          <p>
+            As part of her modern approach to programming, Michal initiated a
+            <strong>museum chamber orchestra</strong> together with the Petah Tikva Museum
+            of Contemporary Art, Israel. The orchestra performs a repertoire that offers a
+            musical interpretation of visual arts exhibits. Since its establishment, the
+            orchestra has performed a series of concerts corresponding to various exhibitions
+            across Israel.
+          </p>
+
+          <div style="padding-top: 1rem;">
+            <a href="contact.html" class="btn btn--accent" style="margin-right: 1rem;">Get in Touch</a>
+            <a href="schedule.html" class="btn btn--outline">Upcoming Schedule</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>Michal Oren</h3>
+          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="musical-curation.html">Musical Curation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Send a message</a></li>
+            <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Michal Oren. All rights reserved.</span>
+        <span>michaloren.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

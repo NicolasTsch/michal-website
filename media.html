@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Photos and videos — Michal Oren, Conductor." />
+  <title>Media — Michal Oren</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    /* Tab navigation */
+    .media-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--cream-dark);
+      margin-bottom: 3rem;
+    }
+
+    .media-tab {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .media-tab.active, .media-tab:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .media-panel { display: none; }
+    .media-panel.active { display: block; }
+
+    /* Photo gallery grid */
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .photo-gallery .gallery__item {
+      aspect-ratio: 3/4;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .photo-gallery .gallery__item.landscape { aspect-ratio: 4/3; }
+    .photo-gallery .gallery__item.square    { aspect-ratio: 1/1; }
+
+    .photo-gallery .gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .photo-gallery .gallery__item:hover img { transform: scale(1.04); }
+
+    @media (max-width: 900px) { .photo-gallery { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 500px) { .photo-gallery { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Michal Oren</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="past-events.html">Past Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="musical-curation.html">Musical Curation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HERO ═══════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Gallery &amp; Video</span>
+      <h1>Media</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════ MEDIA TABS ═══════════════ -->
+  <section class="section">
+    <div class="container">
+
+      <div class="media-tabs" role="tablist">
+        <button class="media-tab active" role="tab" data-panel="photos">Photos</button>
+        <button class="media-tab" role="tab" data-panel="videos">Videos</button>
+      </div>
+
+      <!-- ── Photos ── -->
+      <div class="media-panel active fade-in" id="panel-photos">
+        <!-- TO DO: To add more photos, copy a .gallery__item block and set the correct
+                    src path. Use class="landscape" for wide/horizontal photos,
+                    no extra class for portrait/vertical photos. -->
+        <div class="photo-gallery">
+
+          <div class="gallery__item landscape">
+            <img src="images/photo-1.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="images/photo-2.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+          </div>
+          <div class="gallery__item">
+            <img src="images/about-portrait.jpg" alt="Michal Oren" loading="lazy" />
+          </div>
+
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted);">
+          Click any photo to view full size. For press and high-resolution downloads,
+          please <a href="contact.html" style="color: var(--accent);">get in touch</a>.
+        </p>
+      </div>
+
+      <!-- ── Videos ── -->
+      <div class="media-panel" id="panel-videos">
+        <div class="video-grid fade-in">
+
+          <!-- TO DO: Replace VIDEO_ID with real YouTube video IDs.
+                      The ID is the part after ?v= in a YouTube URL.
+                      Example: https://www.youtube.com/watch?v=dQw4w9WgXcQ → ID is dQw4w9WgXcQ
+                      Copy a .video-item block to add more videos. -->
+
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_1"
+                title="Michal Oren — Performance 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="video-caption">
+              <!-- TO DO: Add title, orchestra and date -->
+              Performance — Orchestra · Venue · Year
+            </p>
+          </div>
+
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_2"
+                title="Michal Oren — Performance 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="video-caption">Performance — Orchestra · Venue · Year</p>
+          </div>
+
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_3"
+                title="Michal Oren — Performance 3"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="video-caption">Performance — Orchestra · Venue · Year</p>
+          </div>
+
+          <div class="video-item">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID_4"
+                title="Michal Oren — Performance 4"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <p class="video-caption">Performance — Orchestra · Venue · Year</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ LIGHTBOX ═══════════════ -->
+  <div class="lightbox" role="dialog" aria-label="Image viewer">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__img" src="" alt="" />
+  </div>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>Michal Oren</h3>
+          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="musical-curation.html">Musical Curation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Send a message</a></li>
+            <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Michal Oren. All rights reserved.</span>
+        <span>michaloren.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Tab switching for Photos / Videos */
+    const tabs   = document.querySelectorAll('.media-tab');
+    const panels = document.querySelectorAll('.media-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Past performances and engagements — Michal Oren, Conductor." />
+  <title>Past Events — Michal Oren</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    .year-section { margin-bottom: 4rem; }
+
+    .year-heading {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 300;
+      color: var(--accent);
+      opacity: 0.3;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--cream-dark);
+      padding-bottom: 0.5rem;
+    }
+
+    .past-event-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 180px;
+      gap: 1.5rem;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      align-items: start;
+    }
+
+    .past-event-row:last-child { border-bottom: none; }
+
+    .past-event-row .date-col {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      padding-top: 0.2rem;
+    }
+
+    .past-event-row .title-col h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+
+    .past-event-row .title-col .programme {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .past-event-row .venue-col {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: right;
+      padding-top: 0.2rem;
+    }
+
+    @media (max-width: 700px) {
+      .past-event-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+      .past-event-row .venue-col { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════ NAVIGATION ═══════════════ -->
+  <nav class="nav scrolled">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Michal Oren</a>
+      <button class="nav__toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="past-events.html">Past Events</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="musical-curation.html">Musical Curation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ PAGE HERO ═══════════════ -->
+  <div class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Archive</span>
+      <h1>Past Events</h1>
+    </div>
+  </div>
+
+  <!-- ═══════════════ EVENTS ═══════════════ -->
+  <section class="section">
+    <div class="container" style="max-width: 960px;">
+
+      <!-- TO DO: Replace all placeholder events below with your real past concerts.
+                  Copy the .past-event-row block to add more rows.
+                  Copy the .year-section block to add a new year. -->
+
+      <div class="year-section fade-in">
+        <div class="year-heading">2025</div>
+
+        <div class="past-event-row">
+          <div class="date-col">Nov 2025</div>
+          <div class="title-col">
+            <h4>5th Koussevitzky Conducting Competition</h4>
+            <p class="programme">2nd Prize</p>
+          </div>
+          <div class="venue-col">Grosseto, Italy</div>
+        </div>
+
+        <div class="past-event-row">
+          <div class="date-col">2024–2025</div>
+          <div class="title-col">
+            <h4>Opera North</h4>
+            <p class="programme">Female Conductor Trainee</p>
+          </div>
+          <div class="venue-col">Leeds, UK</div>
+        </div>
+
+        <!-- TO DO: Add more 2025 events here -->
+      </div>
+
+      <div class="year-section fade-in">
+        <div class="year-heading">2024</div>
+
+        <div class="past-event-row">
+          <div class="date-col">2024</div>
+          <div class="title-col">
+            <h4>Young Conductors Showcase</h4>
+            <p class="programme">BBC Scottish Symphony Orchestra</p>
+          </div>
+          <div class="venue-col">Glasgow, Scotland</div>
+        </div>
+
+        <div class="past-event-row">
+          <div class="date-col">2024</div>
+          <div class="title-col">
+            <h4>Women Conductors' Programme — RPS</h4>
+            <p class="programme">Royal Northern Sinfonia · led by Alice Farnham</p>
+          </div>
+          <div class="venue-col">Newcastle, UK</div>
+        </div>
+
+        <!-- TO DO: Add more 2024 events here -->
+      </div>
+
+      <div class="year-section fade-in">
+        <div class="year-heading">2023</div>
+
+        <div class="past-event-row">
+          <div class="date-col">2023</div>
+          <div class="title-col">
+            <h4>4th International Academy of Orchestra Conducting</h4>
+            <p class="programme">1st Prize</p>
+          </div>
+          <div class="venue-col">Estoril, Portugal</div>
+        </div>
+
+        <div class="past-event-row">
+          <div class="date-col">2023</div>
+          <div class="title-col">
+            <h4>3rd International Orchestral Conducting Competition</h4>
+            <p class="programme">2nd Prize — Universidad de Almería</p>
+          </div>
+          <div class="venue-col">Almería, Spain</div>
+        </div>
+
+        <!-- TO DO: Add more 2023 events here -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <h3>Michal Oren</h3>
+          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="biography.html">Biography</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="past-events.html">Past Events</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="musical-curation.html">Musical Curation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Send a message</a></li>
+            <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Michal Oren. All rights reserved.</span>
+        <span>michaloren.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
