@@ -329,7 +329,7 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   position: relative;
   width: min(var(--container), 100% - 3rem);
   margin-inline: auto;
-  padding-bottom: 5rem;
+  padding-bottom: clamp(10rem, 22vh, 18rem);
   color: var(--cream);
 }
 
@@ -406,7 +406,7 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 
 .banner-strip__text {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 1.15rem;
   font-weight: 500;
   font-style: italic;
   letter-spacing: 0.05em;
@@ -838,6 +838,9 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 }
 
 .footer__col ul a:hover { color: var(--cream); }
+
+.footer__col a[href^="mailto"] { display: none; }
+.footer__col li:has(a[href^="mailto"]) { display: none; }
 
 .footer__bottom {
   border-top: 1px solid rgba(246,238,227,0.1);
