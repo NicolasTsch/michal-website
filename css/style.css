@@ -150,7 +150,11 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  transition: background var(--transition), box-shadow var(--transition);
+  transition: background var(--transition), box-shadow var(--transition), transform 0.35s ease;
+}
+
+.nav--hidden {
+  transform: translateY(-100%);
 }
 
 .nav.scrolled {

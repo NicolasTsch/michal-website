@@ -78,6 +78,35 @@
 
     .event-card__body p { font-size: 0.9rem; color: var(--text-muted); }
 
+    .programme-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .programme-list li {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      padding-left: 1rem;
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .programme-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+
+    .programme-list li strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     @media (max-width: 600px) {
       .event-card { grid-template-columns: 1fr; gap: 0.75rem; }
       .event-card__date { text-align: left; display: flex; align-items: baseline; gap: 0.5rem; }
@@ -121,6 +150,7 @@
         <div class="divider"></div>
       </div>
 
+      <!-- Jun 21 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">21</div>
@@ -128,13 +158,20 @@
         </div>
         <div class="event-card__body">
           <h3>Gala Concert — Yad Vashem Foundation UK</h3>
-          <p class="programme">Bruch · Mendelssohn · Klein · Korngold · Mahler</p>
           <div class="event-card__meta">
             <span>6:00 pm · London, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Bruch</strong> — Kol Nidrei</li>
+            <li><strong>Mendelssohn</strong></li>
+            <li><strong>Klein</strong></li>
+            <li><strong>Korngold</strong></li>
+            <li><strong>Mahler</strong></li>
+          </ul>
         </div>
       </div>
 
+      <!-- Jul 28 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">28</div>
@@ -142,13 +179,18 @@
         </div>
         <div class="event-card__body">
           <h3>Gstaad Conducting Academy</h3>
-          <p class="programme">Classes with Jaap van Zweden &amp; Johannes Schlaefli</p>
+          <p class="programme">Classes with Jaap van Zweden, Johannes Schlaefli &amp; Alexander Shelley</p>
           <div class="event-card__meta">
             <span>28 July – 16 August · Gstaad, Switzerland</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Orchestras:</strong> Sinfonie Orchester Biel Solothurn &amp; Gstaad Festival Orchestra</li>
+            <li><strong>Repertoire:</strong> Mozart · Beethoven · Debussy · Dvořák · Brahms · Elgar</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Sep 3 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">3</div>
@@ -160,9 +202,15 @@
           <div class="event-card__meta">
             <span>7:00 pm · Uppsala, Sweden</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Damström</strong> — Nixus</li>
+            <li><strong>Chopin</strong> — Piano Concerto No. 2</li>
+            <li><strong>Mendelssohn</strong> — Symphony No. 3</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Sep 10 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">10</div>
@@ -170,13 +218,19 @@
         </div>
         <div class="event-card__body">
           <h3>Bournemouth Symphony Orchestra</h3>
-          <p class="programme">Vaughan Williams · Mendelssohn · Massenet · Bizet</p>
           <div class="event-card__meta">
             <span>7:30 pm · Weymouth, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Vaughan Williams</strong> — Five Variants of Dives and Lazarus</li>
+            <li><strong>Mendelssohn</strong> — Violin Concerto</li>
+            <li><strong>Massenet</strong> — Méditation from Thaïs</li>
+            <li><strong>Bizet</strong> — Symphony in C</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Sep 14 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">14</div>
@@ -184,13 +238,19 @@
         </div>
         <div class="event-card__body">
           <h3>Bournemouth Symphony Orchestra</h3>
-          <p class="programme">Vaughan Williams · Mendelssohn · Massenet · Bizet</p>
           <div class="event-card__meta">
             <span>7:30 pm · Queen's Theatre, Barnstaple, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Vaughan Williams</strong> — Five Variants of Dives and Lazarus</li>
+            <li><strong>Mendelssohn</strong> — Violin Concerto</li>
+            <li><strong>Massenet</strong> — Méditation from Thaïs</li>
+            <li><strong>Bizet</strong> — Symphony in C</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Nov 7 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">7</div>
@@ -202,9 +262,13 @@
           <div class="event-card__meta">
             <span>Geneva, Switzerland</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Repertoire:</strong> Mendelssohn · Farrenc · Bizet · Ligeti · Chin · Schumann · Debussy</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Nov 20 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">20</div>
@@ -212,24 +276,32 @@
         </div>
         <div class="event-card__body">
           <h3>Orchestra Sinfonica Brutia &amp; International Opera Choir</h3>
-          <p class="programme">Jenkins</p>
           <div class="event-card__meta">
             <span>8:30 pm · Cosenza, Italy</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Karl Jenkins</strong> — Stabat Mater</li>
+          </ul>
         </div>
       </div>
 
+      <!-- Dec 9 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
           <div class="day">9</div>
           <div class="month-year">Dec 2026</div>
         </div>
         <div class="event-card__body">
-          <h3>Bournemouth Symphony Orchestra</h3>
-          <p class="programme">Corelli · Vivaldi · Mussorgsky · Tchaikovsky</p>
+          <h3>Bournemouth Symphony Orchestra — Christmas Concert</h3>
           <div class="event-card__meta">
             <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Corelli</strong> — Concerto Grosso 'Christmas Concerto'</li>
+            <li><strong>Vivaldi</strong> — Autumn &amp; Winter from The Four Seasons</li>
+            <li><strong>Mussorgsky</strong> — A Night on the Bare Mountain</li>
+            <li><strong>Tchaikovsky</strong> — The Nutcracker Suite</li>
+          </ul>
         </div>
       </div>
 

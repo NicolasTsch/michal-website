@@ -5,8 +5,24 @@
 /* ── Navigation scroll effect ─────────────────────────────── */
 const nav = document.querySelector('.nav');
 if (nav) {
+  let lastScrollY = 0;
+
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
+    const currentScrollY = window.scrollY;
+
+    // Always show when near the top
+    if (currentScrollY < 80) {
+      nav.classList.remove('nav--hidden');
+    } else if (currentScrollY > lastScrollY) {
+      // Scrolling down — hide
+      nav.classList.add('nav--hidden');
+    } else {
+      // Scrolling up — show
+      nav.classList.remove('nav--hidden');
+    }
+
+    nav.classList.toggle('scrolled', currentScrollY > 50);
+    lastScrollY = currentScrollY;
   }, { passive: true });
 }
 
