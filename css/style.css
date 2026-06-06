@@ -55,8 +55,8 @@ h1, h2, h3, h4 {
   letter-spacing: 0.01em;
 }
 
-h1 { font-size: clamp(3rem, 7vw, 6rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+h1 { font-size: clamp(3.5rem, 8vw, 7rem); }
+h2 { font-size: clamp(2.4rem, 4.5vw, 3.8rem); }
 h3 { font-size: clamp(1.3rem, 2.5vw, 1.9rem); }
 h4 { font-size: 1.2rem; }
 
@@ -224,6 +224,76 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   transition: transform var(--transition), opacity var(--transition);
 }
 
+/* ── About heading ──────────────────────────────────────────── */
+.about__heading {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.about__heading em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+/* ── Statement section ──────────────────────────────────────── */
+.statement-section {
+  background: var(--dark);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.statement-section::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.statement-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.35;
+  max-width: 960px;
+  letter-spacing: 0.015em;
+  padding-left: 3rem;
+}
+
+.statement-quote::before {
+  content: '— ';
+  color: var(--accent);
+  font-style: normal;
+}
+
+/* ── News section header ────────────────────────────────────── */
+.news-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.news-header .eyebrow { grid-column: 1; grid-row: 1; }
+
+.news-header h2 {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.news-header .divider { display: none; }
+
 /* ── Hero ───────────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -279,6 +349,13 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   text-transform: uppercase;
   color: var(--accent-light);
   margin-bottom: 1rem;
+}
+
+.hero__rule {
+  width: 50px;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 1.5rem;
 }
 
 .hero__tag {
