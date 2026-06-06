@@ -7,9 +7,16 @@
   <title>Michal Oren — Conductor</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    /* Fade-in animation used across sections */
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 75% top;
+    }
   </style>
 </head>
 <body>
@@ -32,12 +39,13 @@
   </nav>
 
   <!-- ═══════════════ HERO ═══════════════ -->
-  <section class="hero" style="background-image: url('images/hero.jpg');">
+  <section class="hero">
+    <img src="images/hero.jpg" class="hero__bg" alt="" aria-hidden="true" />
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <div class="hero__rule"></div>
       <p class="hero__subtitle">Conductor</p>
-      <h1>Michal Oren</h1>
+      <h1 style="font-size: clamp(2.2rem, 5vw, 4rem);">Michal Oren</h1>
     </div>
   </section>
 
@@ -97,7 +105,7 @@
   </section>
 
   <!-- ═══════════════ IN THE NEWS ═══════════════ -->
-  <section class="section section--mid">
+  <section class="section">
     <div class="container">
       <div class="section-header news-header fade-in">
         <span class="eyebrow">Recent Highlights</span>
