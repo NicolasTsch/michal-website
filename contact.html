@@ -12,7 +12,7 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 420px;
+      grid-template-columns: 1fr 2fr;
       gap: 5rem;
       align-items: start;
     }
@@ -26,7 +26,7 @@
     }
 
     .contact-block p, .contact-block a {
-      font-size: 0.95rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
       line-height: 1.7;
     }
@@ -74,7 +74,7 @@
     <div class="container">
       <div class="page-hero__rule"></div>
       <span class="eyebrow">Get in Touch</span>
-      <h1>Contact</h1>
+      <div class="page-hero__title"><h1>Contact</h1></div>
     </div>
   </div>
 
@@ -85,29 +85,11 @@
 
         <!-- Left: Info + photo -->
         <div class="fade-in">
-          <img
-            src="images/bio-portrait.jpg"
-            alt="Michal Oren"
-            class="contact-portrait"
-            loading="lazy"
-          />
-
           <div class="contact-info">
             <div class="contact-block">
-              <span class="eyebrow">Email</span>
-              <a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a>
-            </div>
-            <div class="contact-block">
-              <span class="eyebrow">Enquiries</span>
               <p>
-                For booking, collaboration, press, or any other enquiry,
-                please use the form or send an email directly.
-                I aim to respond within 48 hours.
+                For booking, collaboration, press, or any other enquiry, please feel free to leave a message.
               </p>
-            </div>
-            <div class="contact-block">
-              <span class="eyebrow">Press &amp; Photos</span>
-              <p>High-resolution press photographs are available on request.</p>
             </div>
           </div>
         </div>
@@ -146,10 +128,6 @@
                 <input type="email" id="email" name="email" required autocomplete="email" />
               </div>
               <div class="form-group full">
-                <label for="organisation">Organisation / Ensemble</label>
-                <input type="text" id="organisation" name="organisation" autocomplete="organization" />
-              </div>
-              <div class="form-group full">
                 <label for="subject">Subject *</label>
                 <input type="text" id="subject" name="subject" required />
               </div>
@@ -180,10 +158,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <h3>Michal Oren</h3>
-          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
-        </div>
         <div class="footer__col">
           <h4>Navigate</h4>
           <ul>
@@ -200,11 +174,24 @@
             <li><a href="contact.html">Send a message</a></li>
             <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
           </ul>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/michal.oren/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/michal.oren.96" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 Michal Oren. All rights reserved.</span>
-        <span>michaloren.com</span>
       </div>
     </div>
   </footer>

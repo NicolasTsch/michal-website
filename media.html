@@ -16,13 +16,14 @@
       gap: 0;
       border-bottom: 2px solid var(--cream-dark);
       margin-bottom: 3.5rem;
+      justify-content: center;
     }
 
     .media-tab {
       font-family: var(--font-display);
       font-size: 1.4rem;
-      font-weight: 400;
-      font-style: italic;
+      font-weight: 300;
+      font-style: normal;
       letter-spacing: 0.02em;
       padding: 1rem 2.5rem 1rem 0;
       cursor: pointer;
@@ -56,7 +57,7 @@
       display: block;
       font-family: var(--font-display);
       font-size: 1rem;
-      font-style: italic;
+      font-style: normal;
       color: var(--text);
       line-height: 1.4;
       margin-bottom: 0.15rem;
@@ -73,35 +74,66 @@
       display: block;
       font-size: 0.78rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
+      letter-spacing: 0.03em;
       color: var(--accent);
     }
 
-    /* Photo gallery grid */
+    /* Photo gallery — uniform grid */
     .photo-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
+      gap: 0.6rem;
     }
 
     .photo-gallery .gallery__item {
-      aspect-ratio: 3/4;
+      position: relative;
       cursor: pointer;
       overflow: hidden;
+      background: var(--cream-dark);
+      aspect-ratio: 4/3;
+      display: block;
     }
 
-    .photo-gallery .gallery__item.landscape { aspect-ratio: 4/3; }
-    .photo-gallery .gallery__item.square    { aspect-ratio: 1/1; }
+    .photo-gallery .gallery__item.landscape {
+      background: #D8E8F0;
+    }
 
     .photo-gallery .gallery__item img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
       transition: transform 0.5s ease;
     }
 
-    .photo-gallery .gallery__item:hover img { transform: scale(1.04); }
+    .photo-gallery .gallery__item.contain img {
+      object-fit: contain;
+    }
+
+    .photo-gallery .gallery__item:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery__credit {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(26, 28, 32, 0.72);
+      color: rgba(255,255,255,0.88);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      padding: 0.5rem 0.8rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .photo-gallery .gallery__item:hover .gallery__credit {
+      transform: translateY(0);
+    }
 
     @media (max-width: 900px) { .photo-gallery { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 500px) { .photo-gallery { grid-template-columns: 1fr; } }
@@ -131,7 +163,7 @@
     <div class="container">
       <div class="page-hero__rule"></div>
       <span class="eyebrow">Gallery &amp; Video</span>
-      <h1>Media</h1>
+      <div class="page-hero__title"><h1>Media</h1></div>
     </div>
   </div>
 
@@ -158,8 +190,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Stravinsky — Danses Concertantes</strong>
-              <span class="video-caption__movement">4th &amp; 5th movements</span>
+              <strong class="video-caption__title">Stravinsky — Danses Concertantes · 4th &amp; 5th movements</strong>
               <span class="video-caption__meta">Orchestre de chambre de Genève · Concours de Genève · November 2025</span>
             </div>
           </div>
@@ -174,8 +205,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Brahms — Symphony No. 3</strong>
-              <span class="video-caption__movement">4th movement</span>
+              <strong class="video-caption__title">Brahms — Symphony No. 3 · 4th movement</strong>
               <span class="video-caption__meta">The Clio Project · October 2024</span>
             </div>
           </div>
@@ -190,8 +220,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">J.S. Bach — Concerto for Three Pianos BWV 1064</strong>
-              <span class="video-caption__movement">1st movement</span>
+              <strong class="video-caption__title">J.S. Bach — Concerto for Three Pianos BWV 1064 · 1st movement</strong>
               <span class="video-caption__meta">Jerusalem Street Orchestra · December 2025</span>
             </div>
           </div>
@@ -206,8 +235,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Ajiashvili — Arafel <em style="font-style:normal; font-size:0.85em; opacity:0.7;">(World Premiere)</em></strong>
-              <span class="video-caption__movement">Excerpts</span>
+              <strong class="video-caption__title">Ajiashvili — Arafel <em style="font-style:normal; font-size:0.85em; opacity:0.7;">(World Premiere)</em> · Excerpts</strong>
               <span class="video-caption__meta">Jerusalem Street Orchestra · December 2025</span>
             </div>
           </div>
@@ -222,8 +250,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Wagner — Siegfried Idyll</strong>
-              <span class="video-caption__movement">End</span>
+              <strong class="video-caption__title">Wagner — Siegfried Idyll · End</strong>
               <span class="video-caption__meta">Royal Academy of Music · March 2025</span>
             </div>
           </div>
@@ -238,8 +265,7 @@
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Elgar — Enigma Variations</strong>
-              <span class="video-caption__movement">Nimrod</span>
+              <strong class="video-caption__title">Elgar — Enigma Variations · Nimrod</strong>
               <span class="video-caption__meta">BBC Scottish Symphony Orchestra · June 2024</span>
             </div>
           </div>
@@ -249,25 +275,61 @@
 
       <!-- ── Photos ── -->
       <div class="media-panel fade-in" id="panel-photos">
-        <!-- TO DO: To add more photos, copy a .gallery__item block and set the correct
-                    src path. Use class="landscape" for wide/horizontal photos,
-                    no extra class for portrait/vertical photos. -->
         <div class="photo-gallery">
 
+          <div class="gallery__item">
+            <img src="images/gallery/Yamit%20Goldberg.jpg" alt="Michal Oren © Yamit Goldberg" loading="lazy" />
+            <span class="gallery__credit">© Yamit Goldberg</span>
+          </div>
+          <div class="gallery__item">
+            <img src="images/gallery/Art%20Lewy%20.JPG" alt="Michal Oren © Art Lewy" loading="lazy" />
+            <span class="gallery__credit">© Art Lewy</span>
+          </div>
           <div class="gallery__item landscape">
-            <img src="images/photo-1.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+            <img src="images/gallery/WOCO_110624_NRFH_creditBenHinesPhoto-17.jpg" alt="Michal Oren © Ben Hines Photo" loading="lazy" />
+            <span class="gallery__credit">© Ben Hines Photo</span>
+          </div>
+          <div class="gallery__item landscape">
+            <img src="images/gallery/Geneva%202_HD%C2%A9Anne-Laure%20Lechat.jpg" alt="Michal Oren © Anne-Laure Lechat" loading="lazy" />
+            <span class="gallery__credit">© Anne-Laure Lechat</span>
           </div>
           <div class="gallery__item">
-            <img src="images/photo-2.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+            <img src="images/gallery/Michal%20Oren%20-%20Inis%20O%C3%ADrr%20Asano%20Photography%201.jpg" alt="Michal Oren © IOA Photography" loading="lazy" />
+            <span class="gallery__credit">© IOA Photography</span>
+          </div>
+          <div class="gallery__item contain">
+            <img src="images/gallery/Michal%20Oren%20-%20Inis%20O%C3%ADrr%20Asano%20Photography%202.jpg" alt="Michal Oren © IOA Photography" loading="lazy" />
+            <span class="gallery__credit">© IOA Photography</span>
           </div>
           <div class="gallery__item">
-            <img src="images/about-portrait.jpg" alt="Michal Oren" loading="lazy" />
+            <img src="images/gallery/Kussewitzky%20Competition.jpg" alt="Michal Oren — Kussewitzky Competition" loading="lazy" />
+            <span class="gallery__credit">© Kussewitzky Competition</span>
+          </div>
+          <div class="gallery__item">
+            <img src="images/gallery/Michal%20Oren%20-%20Tynesight%20Photographic%201.jpg" alt="Michal Oren © Tynesight Photographic" loading="lazy" />
+            <span class="gallery__credit">© Tynesight Photographic</span>
+          </div>
+          <div class="gallery__item landscape">
+            <img src="images/gallery/Geneva%203%C2%A9Anne-Laure%20Lechat.jpg" alt="Michal Oren © Anne-Laure Lechat" loading="lazy" />
+            <span class="gallery__credit">© Anne-Laure Lechat</span>
+          </div>
+          <div class="gallery__item contain">
+            <img src="images/gallery/Michal%20Oren%20-%20Inis%20O%C3%ADrr%20Asano%20Photography%203.jpg" alt="Michal Oren © IOA Photography" loading="lazy" />
+            <span class="gallery__credit">© IOA Photography</span>
+          </div>
+          <div class="gallery__item">
+            <img src="images/gallery/Olivia%20Da%20Costa%201.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+            <span class="gallery__credit">© Olivia Da Costa</span>
+          </div>
+          <div class="gallery__item contain">
+            <img src="images/gallery/Olivia%20Da%20Costa%202.jpg" alt="Michal Oren © Olivia Da Costa" loading="lazy" />
+            <span class="gallery__credit">© Olivia Da Costa</span>
           </div>
 
         </div>
 
         <p style="margin-top: 2rem; font-size: 0.8rem; color: var(--text-muted);">
-          Click any photo to view full size. For press and high-resolution downloads,
+          Click any photo to view full size. For press and high-resolution pictures,
           please <a href="contact.html" style="color: var(--accent);">get in touch</a>.
         </p>
       </div>
@@ -285,10 +347,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <h3>Michal Oren</h3>
-          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
-        </div>
         <div class="footer__col">
           <h4>Navigate</h4>
           <ul>
@@ -305,11 +363,24 @@
             <li><a href="contact.html">Send a message</a></li>
             <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
           </ul>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/michal.oren/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/michal.oren.96" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 Michal Oren. All rights reserved.</span>
-        <span>michaloren.com</span>
       </div>
     </div>
   </footer>

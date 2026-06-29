@@ -10,23 +10,88 @@
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
 
-    .placeholder-hero {
-      min-height: 380px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: var(--cream-dark);
-      border: 2px dashed var(--accent);
-      gap: 1rem;
-      padding: 3rem 2rem;
+    .curation-intro {
+      max-width: 680px;
+      margin-bottom: 4rem;
     }
 
-    .placeholder-hero p {
+    .curation-intro p {
+      font-size: 1.05rem;
+      line-height: 1.85;
       color: var(--text-muted);
-      max-width: 480px;
-      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 2.5rem;
+    }
+
+    .project-card { display: flex; flex-direction: column; gap: 1.2rem; }
+
+    .project-card__img-placeholder {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .project-card__img-slot {
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .project-card__img-slot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-card__img-slot--empty {
+      background: var(--cream-dark);
+    }
+
+    .project-card__body { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .project-card__title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dark);
+      line-height: 1.2;
+    }
+
+    .project-card__meta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .project-card__desc {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      text-align: justify;
+    }
+
+    .project-card__programme {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--text-muted);
+      border-left: 2px solid var(--accent);
+      padding-left: 0.8rem;
+      margin-top: 0.2rem;
+    }
+
+    @media (max-width: 700px) {
+      .projects-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
   </style>
 </head>
@@ -54,21 +119,122 @@
     <div class="container">
       <div class="page-hero__rule"></div>
       <span class="eyebrow">Projects</span>
-      <h1>Musical Curation</h1>
+      <div class="page-hero__title"><h1>Musical Curation</h1></div>
     </div>
   </div>
 
-  <!-- ═══════════════ PLACEHOLDER ═══════════════ -->
+  <!-- ═══════════════ PROJECTS ═══════════════ -->
   <section class="section">
-    <div class="container" style="max-width: 860px;">
-      <div class="placeholder-hero fade-in">
-        <span class="eyebrow" style="margin-bottom: 0;">Coming Soon</span>
-        <h2 style="font-style: italic; font-weight: 300;">This page is under construction</h2>
+    <div class="container">
+
+      <div class="curation-intro fade-in">
         <p>
-          Michal's Musical Curation project — including her museum chamber orchestra
-          at the Petah Tikva Museum of Contemporary Art — will be presented here.
+          Musical Curation &amp; the Museum Orchestra is a collaborative project with the Petach-Tikva Museum of Art in Israel. Each concert presents a programme of classical music chosen to offer a musical interpretation of a current visual arts exhibition — intensifying the visitor's insight and creating an inspiring, multi-sensory experience.
         </p>
-        <a href="contact.html" class="btn btn--accent" style="margin-top: 0.5rem;">Get in Touch</a>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Double -->
+        <div class="project-card fade-in">
+          <div class="project-card__img-placeholder">
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/double-photo.jpg" alt="Double — Sagit Friedman-Hallel" loading="lazy" />
+            </div>
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/double-photo-2.jpg" alt="Double — concert performance" loading="lazy" style="object-position: 22% 55%;" />
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__title">Double</div>
+            <div class="project-card__meta">Sagit Friedman-Hallel &nbsp;·&nbsp; Curator: Reut Ferster</div>
+            <p class="project-card__desc">
+              "Double" presents identical twin girls, styled to evoke the early years of Israeli villages, photographed in historic buildings—many former children's homes—before their disappearance. The concept of the "double image" is echoed in the accompanying music by Mozart and Bach, where techniques such as retrograde, palindrome, canon, and fugue create reflections, symmetry, and repetition. These compositional devices mirror the exhibition's exploration of memory, identity, and duality across image and sound.
+            </p>
+            <div class="project-card__programme">
+              Mozart — Adagio and Fugue in D minor<br>
+              Bach — The Musical Offering
+            </div>
+          </div>
+        </div>
+
+        <!-- Take Me Out of Here -->
+        <div class="project-card fade-in">
+          <div class="project-card__img-placeholder">
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/take-me-out-photo.jpg" alt="Take Me Out of Here — Tal Shoshan" loading="lazy" />
+            </div>
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/take-me-out-photo-2.jpg" alt="Take Me Out of Here — concert performance" loading="lazy" style="object-position: center 60%;" />
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__title">Take Me Out of Here</div>
+            <div class="project-card__meta">Tal Shoshan &nbsp;·&nbsp; Curator: Irena Gordon</div>
+            <p class="project-card__desc">
+              "Take Me Out of Here" transforms family textiles and garments into sculptural works that explore memory, trauma, and renewal. Through stitching, layering, and reconstruction, Tal Shoshan reveals the emotional histories embedded in everyday materials. This process is echoed in Dmitri Shostakovich's Chamber Symphony in D minor, which weaves together quotations from his earlier works, unified by his musical signature motif (D–S–C–H). Like Shoshan's sewn textiles, the music reconstructs fragments of the past into a powerful reflection on personal and collective memory.
+            </p>
+            <div class="project-card__programme">
+              Shostakovich — Chamber Symphony in D minor, Op. 100a<br>
+              <span style="font-size:0.8rem;">arr. Rudolf Barshai from String Quartet No. 8</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Napoleon 12a -->
+        <div class="project-card fade-in">
+          <div class="project-card__img-placeholder">
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/napoleon-photo.avif" alt="Napoleon 12a — Avi Sabag" loading="lazy" />
+            </div>
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/napoleon-photo-2.jpg" alt="Napoleon 12a — flute performance" loading="lazy" style="object-position: 70% 25%;" />
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__title">Napoleon 12a</div>
+            <div class="project-card__meta">Avi Sabag &nbsp;·&nbsp; Curator: Irena Gordon</div>
+            <div>
+              <p class="project-card__desc" style="margin-bottom: 0;">
+                "Napoleon 12a" by Avi Sabag revisits the "Napoleon Crossing" in Akko during the 1960s through personal and collective memory, blending past and present as the neighbourhood shifts from low-income to upscale. The exhibition combines archival materials, photographs, documents, and residents' voices with research on the crossing, one of the last to be closed.
+              </p>
+              <p class="project-card__desc" style="margin-top: 0;">
+                Dr. Avraham (Avi) Eilam-Amzallag's "Taqsim for Flute" (1968) similarly fuses Andalusian and Western serial music within the Eastern maqam tradition, creating a dialogue between East and West, tradition and modernity.
+              </p>
+            </div>
+            <div class="project-card__programme">
+              Dr. Avraham Eilam-Amzallag — Taqsim for Flute (1968)
+            </div>
+          </div>
+        </div>
+
+        <!-- But Why Do I Hear the Crickets -->
+        <div class="project-card fade-in">
+          <div class="project-card__img-placeholder">
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/crickets-photo.jpg" alt="But Why Do I Hear the Crickets, It's Morning — Tomer Saphir" loading="lazy" />
+            </div>
+            <div class="project-card__img-slot">
+              <img src="images/musical%20curation/crickets-photo-2.jpg" alt="But Why Do I Hear the Crickets — concert performance" loading="lazy" style="object-position: center 40%;" />
+            </div>
+          </div>
+          <div class="project-card__body">
+            <div class="project-card__title">But Why Do I Hear the Crickets, It's Morning</div>
+            <div class="project-card__meta">Tomer Saphir &nbsp;·&nbsp; Curator: Irena Gordon</div>
+            <div>
+              <p class="project-card__desc" style="margin-bottom: 0;">
+                Tomer Saphir's "But Why Do I Hear the Crickets, It's Morning" presents a distorted, ominous world shaped by a conversation with his daughter about an apocalyptic dream she once had. The child's voice introduces a tender, optimistic counterpoint that softens the prophecy's weight.
+              </p>
+              <p class="project-card__desc" style="margin-top: 0;">
+                Béla Bartók's Divertimento for Strings (1939), composed in neutral Switzerland while Europe faced fascism, echoes this tension. Drawing on the Baroque concerto grosso tradition, it shifts between lightness and unease, reflecting both escape and anxiety. The work ultimately holds space for struggle while suggesting that music can still carry hope in dark times.
+              </p>
+            </div>
+            <div class="project-card__programme">
+              Bartók — Divertimento for Strings
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -77,10 +243,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <h3>Michal Oren</h3>
-          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
-        </div>
         <div class="footer__col">
           <h4>Navigate</h4>
           <ul>
@@ -97,11 +259,24 @@
             <li><a href="contact.html">Send a message</a></li>
             <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
           </ul>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/michal.oren/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/michal.oren.96" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 Michal Oren. All rights reserved.</span>
-        <span>michaloren.com</span>
       </div>
     </div>
   </footer>

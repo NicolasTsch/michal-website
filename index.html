@@ -13,9 +13,10 @@
       position: absolute;
       inset: 0;
       width: 100%;
-      height: 100%;
+      height: 110%;
       object-fit: cover;
       object-position: 75% top;
+      transform: translateY(-6%);
     }
   </style>
 </head>
@@ -40,17 +41,17 @@
 
   <!-- ═══════════════ HERO ═══════════════ -->
   <section class="hero">
-    <img src="images/hero.jpg" class="hero__bg" alt="" aria-hidden="true" />
+    <img src="images/hero_2.jpg" class="hero__bg" alt="" aria-hidden="true" />
     <div class="hero__overlay"></div>
     <div class="hero__content">
       <div class="hero__rule"></div>
       <p class="hero__subtitle">Conductor</p>
-      <h1 style="font-size: clamp(2.2rem, 5vw, 4rem);">Michal Oren</h1>
+      <h1 style="font-size: clamp(2.8rem, 6vw, 5rem);">Michal Oren</h1>
     </div>
   </section>
 
   <!-- ═══════════════ BANNER STRIP ═══════════════ -->
-  <div class="banner-strip">
+  <div class="banner-strip" style="display:none">
     <div class="banner-strip__inner">
       <div class="banner-strip__left">
         <div class="banner-strip__logo-wrap">
@@ -82,30 +83,25 @@
             loading="lazy"
           />
         </div>
-        <div class="about__text fade-in">
-          <span class="eyebrow">About</span>
-          <h2 class="about__heading">A conductor shaped by<br><em>narrative</em> and musical imagination</h2>
-          <div class="divider"></div>
-          <p>
-            Named a <strong>Classic FM 2026 Rising Star</strong>, Michal Oren is a conductor
-            whose work is shaped by a deep sense of narrative and musical imagination.
-            Originally from Tel-Aviv, Israel, she was recently announced as the next
-            <strong>Calleva Assistant Conductor of the Bournemouth Symphony Orchestra</strong>
-            for the 2026–2027 season.
-          </p>
-          <p>
-            She is one of six semi-finalists in the upcoming <strong>80th Concours de Genève
-            Conducting Competition</strong> (November 2026) and a current participant of
-            the <strong>Taki Alsop Conducting Fellowship</strong> Mentoring Programme.
-          </p>
-          <a href="biography.html" class="btn btn--outline">Full Biography</a>
+        <div class="about__text-wrap fade-in">
+          <div class="about__text">
+            <h2>About</h2>
+            <div class="divider"></div>
+            <p>
+              Named a <strong>Classic FM 2026 Rising Star</strong>, Michal Oren is an Israeli conductor whose work is shaped by a deep sense of narrative and musical imagination. She is the next <strong>Calleva Assistant Conductor</strong> of the <strong>Bournemouth Symphony Orchestra</strong> (2026–2027) and one of six semi-finalists in the upcoming <strong>80th Concours de Genève Conducting Competition</strong>. She is a participant in this year's <strong>Gstaad Conducting Academy</strong> and the <strong>6th Evgeny Svetlanov Competition</strong>.
+            </p>
+            <p>
+              Previously, she was the <strong>Female Conductor Trainee</strong> at <strong>Opera North</strong> (2024–2025) and performed in the 2024 Young Conductors' Showcase with the <strong>BBC Scottish Symphony Orchestra</strong>. In addition, Michal won <strong>1st prize and 2nd prizes</strong> in international competitions in Portugal, Italy and Spain. Michal is the founder and musical curator of the <strong>Museum Orchestra</strong> of the <strong>Petach-Tikva Museum of Art</strong>, which gives musical interpretations of visual arts exhibits.
+            </p>
+            <a href="biography.html" class="btn btn--outline">Full Biography</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ═══════════════ IN THE NEWS ═══════════════ -->
-  <section class="section">
+  <section class="section news-section">
     <div class="container">
       <div class="section-header news-header fade-in">
         <span class="eyebrow">Recent Highlights</span>
@@ -116,15 +112,12 @@
 
         <div class="news-card fade-in">
           <div class="news-card__logo">
-            <img src="images/news/bso.png" alt="Bournemouth Symphony Orchestra" loading="lazy" />
+            <img src="images/news/bso.png" alt="Bournemouth Symphony Orchestra" loading="lazy" style="height: 110px;" />
           </div>
           <div class="news-card__body">
-            <span class="news-card__date">April 2026</span>
+            <span class="news-card__date">28 April 2026</span>
             <p class="news-card__text">Michal Oren is announced as Bournemouth Symphony Orchestra's Calleva Assistant Conductor ahead of its 2026/27 season.</p>
-            <a href="#" class="news-card__link" target="_blank" rel="noopener">
-              <!-- TO DO: Replace # with the BSO announcement URL -->
-              Read More <span aria-hidden="true">→</span>
-            </a>
+            <a href="https://bsolive.com/press-releases/the-bso-announces-2026-27-calleva-assistant-conductor/" class="news-card__link" target="_blank" rel="noopener">Read More →</a>
           </div>
         </div>
 
@@ -133,12 +126,9 @@
             <img src="images/news/Menuhin-Academy_Logo_pos_rgb_edited_edited.png" alt="Gstaad Menuhin Festival &amp; Academy" loading="lazy" />
           </div>
           <div class="news-card__body">
-            <span class="news-card__date">March 2026</span>
+            <span class="news-card__date">10 March 2026</span>
             <p class="news-card__text">Michal was selected as one of 10 participants (out of 190 applications) in the prestigious Gstaad Conducting Academy.</p>
-            <a href="#" class="news-card__link" target="_blank" rel="noopener">
-              <!-- TO DO: Replace # with the Gstaad Academy URL -->
-              Read More <span aria-hidden="true">→</span>
-            </a>
+            <a href="https://www.gstaadacademy.ch/en/conducting/participants" class="news-card__link" target="_blank" rel="noopener">Read More →</a>
           </div>
         </div>
 
@@ -147,12 +137,9 @@
             <img src="images/news/classic-fm-logo-png-transparent_edited.png" alt="Classic FM" loading="lazy" />
           </div>
           <div class="news-card__body">
-            <span class="news-card__date">February 2026</span>
+            <span class="news-card__date">4 March 2026</span>
             <p class="news-card__text">Michal Oren is named one of Classic FM's 2026 Rising Stars — "30 Under 30".</p>
-            <a href="#" class="news-card__link" target="_blank" rel="noopener">
-              <!-- TO DO: Replace # with the Classic FM Rising Stars article URL -->
-              Read More <span aria-hidden="true">→</span>
-            </a>
+            <a href="https://www.classicfm.com/music-news/rising-stars-2026/" class="news-card__link" target="_blank" rel="noopener">Read More →</a>
           </div>
         </div>
 
@@ -161,12 +148,9 @@
             <img src="images/news/taki.png" alt="Taki Alsop Conducting Fellowship" loading="lazy" />
           </div>
           <div class="news-card__body">
-            <span class="news-card__date">January 2026</span>
-            <p class="news-card__text">Michal joined the Mentoring Programme as one of 10 mentees in 2026.</p>
-            <a href="#" class="news-card__link" target="_blank" rel="noopener">
-              <!-- TO DO: Replace # with the Taki Alsop Fellowship URL -->
-              Read More <span aria-hidden="true">→</span>
-            </a>
+            <span class="news-card__date">15 January 2026</span>
+            <p class="news-card__text">Michal joined the Taki Alsop Mentoring Programme as one of 10 mentees in 2026.</p>
+            <a href="https://takialsop.org/shes-connected-by-att-mentoring-program/" class="news-card__link" target="_blank" rel="noopener">Read More →</a>
           </div>
         </div>
 
@@ -175,12 +159,9 @@
             <img src="images/news/geneva.png" alt="Concours de Genève" loading="lazy" />
           </div>
           <div class="news-card__body">
-            <span class="news-card__date">November 2025</span>
-            <p class="news-card__text">Michal Oren is one of six semi-finalists in the Concours de Genève conducting competition, continuing in November 2026.</p>
-            <a href="#" class="news-card__link" target="_blank" rel="noopener">
-              <!-- TO DO: Replace # with the Concours de Genève URL -->
-              Read More <span aria-hidden="true">→</span>
-            </a>
+            <span class="news-card__date">4 November 2025</span>
+            <p class="news-card__text">Michal Oren is one of six semi-finalists in the Concours de Genève conducting competition, which continues in November 2026.</p>
+            <a href="https://theviolinchannel.com/concours-de-geneve-announces-conducting-semi-finalists/" class="news-card__link" target="_blank" rel="noopener">Read More →</a>
           </div>
         </div>
 
@@ -189,14 +170,14 @@
   </section>
 
   <!-- ═══════════════ FEATURED VIDEO ═══════════════ -->
-  <section class="section section--dark">
+  <section class="section section--mid">
     <div class="container">
       <div class="section-header fade-in">
         <span class="eyebrow">Media</span>
         <h2>Watch</h2>
         <div class="divider"></div>
       </div>
-      <div style="max-width: 780px; margin: 0 auto;" class="fade-in">
+      <div style="max-width: 780px; margin: 0 auto;" class="fade-in video-frame-wrap">
         <div class="video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/5XlSqPPFLHM"
@@ -207,7 +188,7 @@
         </div>
       </div>
       <div style="text-align: center; margin-top: 3rem;" class="fade-in">
-        <a href="media.html" class="btn btn--outline-light">All Videos &amp; Photos</a>
+        <a href="media.html" class="btn btn--outline">All Videos &amp; Photos</a>
       </div>
     </div>
   </section>
@@ -217,23 +198,10 @@
     <div class="container">
       <div class="section-header fade-in">
         <span class="eyebrow">Schedule</span>
-        <h2>Upcoming Performances</h2>
+        <h2>Upcoming</h2>
         <div class="divider"></div>
       </div>
       <div class="event-list fade-in">
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">21</div>
-            <div class="month">Jun</div>
-          </div>
-          <div class="event-info">
-            <h3>Gala Concert — Yad Vashem Foundation UK</h3>
-            <p class="venue">6:00 pm · London, United Kingdom</p>
-          </div>
-          <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
-          </div>
-        </div>
         <div class="event-item">
           <div class="event-date">
             <div class="day">28</div>
@@ -244,7 +212,7 @@
             <p class="venue">28 July – 16 August · Gstaad, Switzerland</p>
           </div>
           <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            <a href="https://www.gstaadacademy.ch/en/conducting/about" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
           </div>
         </div>
         <div class="event-item">
@@ -253,11 +221,11 @@
             <div class="month">Sep</div>
           </div>
           <div class="event-info">
-            <h3>Uppsala Chamber Orchestra</h3>
-            <p class="venue">7:00 pm · Uppsala, Sweden</p>
+            <h3>6th Evgeny Svetlanov Conducting Competition</h3>
+            <p class="venue">3 – 6 September · Birmingham, United Kingdom</p>
           </div>
           <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            <a href="https://www.svetlanov-evgeny.com/conducting-competition/6th-evgeny-svetlanov-international-conducting-competition-2026/candidates-2026/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
           </div>
         </div>
         <div class="event-item">
@@ -270,7 +238,7 @@
             <p class="venue">7:30 pm · Weymouth, United Kingdom</p>
           </div>
           <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            <a href="https://bsolive.com/events/from-darkness-to-light-weymouth/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
           </div>
         </div>
         <div class="event-item">
@@ -280,36 +248,10 @@
           </div>
           <div class="event-info">
             <h3>Bournemouth Symphony Orchestra</h3>
-            <p class="venue">7:30 pm · Queen's Theatre, Barnstaple, United Kingdom</p>
+            <p class="venue">7:30 pm · Barnstaple, United Kingdom</p>
           </div>
           <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">7</div>
-            <div class="month">Nov</div>
-          </div>
-          <div class="event-info">
-            <h3>80th Concours de Genève Conducting Competition</h3>
-            <p class="venue">Geneva, Switzerland · Semi-Finals</p>
-          </div>
-          <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">20</div>
-            <div class="month">Nov</div>
-          </div>
-          <div class="event-info">
-            <h3>Orchestra Sinfonica Brutia &amp; International Opera Choir</h3>
-            <p class="venue">8:30 pm · Cosenza, Italy</p>
-          </div>
-          <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            <a href="https://bsolive.com/events/from-darkness-to-light-barnstaple/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
           </div>
         </div>
         <div class="event-item">
@@ -319,15 +261,15 @@
           </div>
           <div class="event-info">
             <h3>Bournemouth Symphony Orchestra</h3>
-            <p class="venue">7:30 pm · Lighthouse, Poole, United Kingdom</p>
+            <p class="venue">7:30 pm · Poole, United Kingdom</p>
           </div>
           <div class="event-cta">
-            <a href="schedule.html" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            <a href="https://bsolive.com/events/winter-warmers/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
           </div>
         </div>
       </div>
-      <div style="margin-top: 2.5rem;" class="fade-in">
-        <a href="schedule.html" class="btn btn--accent">Full Schedule</a>
+      <div style="margin-top: 2.5rem; text-align: center;" class="fade-in">
+        <a href="schedule.html" class="btn btn--outline">Full Schedule</a>
       </div>
     </div>
   </section>
@@ -336,10 +278,6 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <h3>Michal Oren</h3>
-          <p>Conductor · Classic FM 2026 Rising Star<br>Calleva Assistant Conductor, Bournemouth Symphony Orchestra</p>
-        </div>
         <div class="footer__col">
           <h4>Navigate</h4>
           <ul>
@@ -356,11 +294,24 @@
             <li><a href="contact.html">Send a message</a></li>
             <li><a href="mailto:michal.oren.36@gmail.com">michal.oren.36@gmail.com</a></li>
           </ul>
+          <div class="footer__social">
+            <a href="https://www.instagram.com/michal.oren/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/michal.oren.96" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
       <div class="footer__bottom">
         <span>&copy; 2026 Michal Oren. All rights reserved.</span>
-        <span>michaloren.com</span>
       </div>
     </div>
   </footer>
@@ -369,6 +320,7 @@
     <button class="lightbox__close" aria-label="Close">&times;</button>
     <img class="lightbox__img" src="" alt="" />
   </div>
+
 
   <script src="js/main.js"></script>
 </body>

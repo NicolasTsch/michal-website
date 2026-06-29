@@ -6,6 +6,7 @@
 const nav = document.querySelector('.nav');
 if (nav) {
   let lastScrollY = 0;
+  const hasLightBackground = !!document.querySelector('.page-hero');
 
   window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
@@ -21,7 +22,8 @@ if (nav) {
       nav.classList.remove('nav--hidden');
     }
 
-    nav.classList.toggle('scrolled', currentScrollY > 50);
+    // Keep dark background on pages with light (cream) hero background
+    nav.classList.toggle('scrolled', currentScrollY > 50 || hasLightBackground);
     lastScrollY = currentScrollY;
   }, { passive: true });
 }
@@ -98,6 +100,7 @@ if (urlParams.get('success') === 'true') {
     document.querySelector('.contact-form')?.style.setProperty('display', 'none');
   }
 }
+
 
 /* ── Fade-in on scroll ─────────────────────────────────────── */
 const fadeEls = document.querySelectorAll('.fade-in');
