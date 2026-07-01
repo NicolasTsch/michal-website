@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Musical Curation — Michal Oren, Conductor." />
-  <title>Musical Curation — Michal Oren</title>
+  <meta name="description" content="Musical Curation – Michal Oren, Conductor." />
+  <title>Musical Curation – Michal Oren</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -31,12 +31,41 @@
     .project-card { display: flex; flex-direction: column; gap: 1.2rem; }
 
     .project-card__img-placeholder {
+      position: relative;
       width: 100%;
       aspect-ratio: 16/9;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
       overflow: hidden;
+    }
+
+    .project-card__credit {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(26, 28, 32, 0.72);
+      color: rgba(255,255,255,0.88);
+      font-size: 0.58rem;
+      letter-spacing: 0.06em;
+      padding: 0.35rem 0.6rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      pointer-events: none;
+    }
+
+    .project-card__img-placeholder:hover .project-card__credit {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1024px) {
+      /* Touch has no :hover, so keep the credit permanently visible. */
+      .project-card__credit {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(26,28,32,0.75), rgba(26,28,32,0));
+        padding-top: 1.4rem;
+      }
     }
 
     .project-card__img-slot {
@@ -129,7 +158,7 @@
 
       <div class="curation-intro fade-in">
         <p>
-          Musical Curation &amp; the Museum Orchestra is a collaborative project with the Petach-Tikva Museum of Art in Israel. Each concert presents a programme of classical music chosen to offer a musical interpretation of a current visual arts exhibition — intensifying the visitor's insight and creating an inspiring, multi-sensory experience.
+          Musical Curation &amp; the Museum Orchestra is a collaborative project with the Petach Tikva Museum of Art in Israel. Each concert presents a programme of classical music chosen to offer a musical interpretation of a current visual arts exhibition – intensifying the visitor's insight and creating an inspiring, multi-sensory experience.
         </p>
       </div>
 
@@ -139,21 +168,22 @@
         <div class="project-card fade-in">
           <div class="project-card__img-placeholder">
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/double-photo.jpg" alt="Double — Sagit Friedman-Hallel" loading="lazy" />
+              <img src="images/musical%20curation/double-photo.jpg" alt="Double – Sagit Friedman-Hallel" loading="lazy" />
             </div>
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/double-photo-2.jpg" alt="Double — concert performance" loading="lazy" style="object-position: 22% 55%;" />
+              <img src="images/musical%20curation/double-photo-2.jpg" alt="Double – concert performance" loading="lazy" style="object-position: 22% 55%;" />
             </div>
+            <span class="project-card__credit">© Petach Tikva Museum of Art</span>
           </div>
           <div class="project-card__body">
             <div class="project-card__title">Double</div>
             <div class="project-card__meta">Sagit Friedman-Hallel &nbsp;·&nbsp; Curator: Reut Ferster</div>
             <p class="project-card__desc">
-              "Double" presents identical twin girls, styled to evoke the early years of Israeli villages, photographed in historic buildings—many former children's homes—before their disappearance. The concept of the "double image" is echoed in the accompanying music by Mozart and Bach, where techniques such as retrograde, palindrome, canon, and fugue create reflections, symmetry, and repetition. These compositional devices mirror the exhibition's exploration of memory, identity, and duality across image and sound.
+              "Double" presents identical twin girls, styled to evoke the early years of Israeli villages, photographed in historic buildings – many former children's homes – before their disappearance. The concept of the "double image" is echoed in the accompanying music by Mozart and Bach, where techniques such as retrograde, palindrome, canon, and fugue create reflections, symmetry, and repetition. These compositional devices mirror the exhibition's exploration of memory, identity, and duality across image and sound.
             </p>
             <div class="project-card__programme">
-              Mozart — Adagio and Fugue in D minor<br>
-              Bach — The Musical Offering
+              Mozart – Adagio and Fugue in D minor<br>
+              Bach – The Musical Offering
             </div>
           </div>
         </div>
@@ -162,11 +192,12 @@
         <div class="project-card fade-in">
           <div class="project-card__img-placeholder">
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/take-me-out-photo.jpg" alt="Take Me Out of Here — Tal Shoshan" loading="lazy" />
+              <img src="images/musical%20curation/take-me-out-photo.jpg" alt="Take Me Out of Here – Tal Shoshan" loading="lazy" />
             </div>
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/take-me-out-photo-2.jpg" alt="Take Me Out of Here — concert performance" loading="lazy" style="object-position: center 60%;" />
+              <img src="images/musical%20curation/take-me-out-photo-2.jpg" alt="Take Me Out of Here – concert performance" loading="lazy" style="object-position: center 60%;" />
             </div>
+            <span class="project-card__credit">© Petach Tikva Museum of Art</span>
           </div>
           <div class="project-card__body">
             <div class="project-card__title">Take Me Out of Here</div>
@@ -175,7 +206,7 @@
               "Take Me Out of Here" transforms family textiles and garments into sculptural works that explore memory, trauma, and renewal. Through stitching, layering, and reconstruction, Tal Shoshan reveals the emotional histories embedded in everyday materials. This process is echoed in Dmitri Shostakovich's Chamber Symphony in D minor, which weaves together quotations from his earlier works, unified by his musical signature motif (D–S–C–H). Like Shoshan's sewn textiles, the music reconstructs fragments of the past into a powerful reflection on personal and collective memory.
             </p>
             <div class="project-card__programme">
-              Shostakovich — Chamber Symphony in D minor, Op. 100a<br>
+              Shostakovich – Chamber Symphony in D minor, Op. 100a<br>
               <span style="font-size:0.8rem;">arr. Rudolf Barshai from String Quartet No. 8</span>
             </div>
           </div>
@@ -185,11 +216,12 @@
         <div class="project-card fade-in">
           <div class="project-card__img-placeholder">
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/napoleon-photo.avif" alt="Napoleon 12a — Avi Sabag" loading="lazy" />
+              <img src="images/musical%20curation/napoleon-photo.avif" alt="Napoleon 12a – Avi Sabag" loading="lazy" />
             </div>
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/napoleon-photo-2.jpg" alt="Napoleon 12a — flute performance" loading="lazy" style="object-position: 70% 25%;" />
+              <img src="images/musical%20curation/napoleon-photo-2.jpg" alt="Napoleon 12a – flute performance" loading="lazy" style="object-position: 70% 25%;" />
             </div>
+            <span class="project-card__credit">© Petach Tikva Museum of Art</span>
           </div>
           <div class="project-card__body">
             <div class="project-card__title">Napoleon 12a</div>
@@ -203,7 +235,7 @@
               </p>
             </div>
             <div class="project-card__programme">
-              Dr. Avraham Eilam-Amzallag — Taqsim for Flute (1968)
+              Dr. Avraham Eilam-Amzallag – Taqsim for Flute (1968)
             </div>
           </div>
         </div>
@@ -212,11 +244,12 @@
         <div class="project-card fade-in">
           <div class="project-card__img-placeholder">
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/crickets-photo.jpg" alt="But Why Do I Hear the Crickets, It's Morning — Tomer Saphir" loading="lazy" />
+              <img src="images/musical%20curation/crickets-photo.jpg" alt="But Why Do I Hear the Crickets, It's Morning – Tomer Saphir" loading="lazy" />
             </div>
             <div class="project-card__img-slot">
-              <img src="images/musical%20curation/crickets-photo-2.jpg" alt="But Why Do I Hear the Crickets — concert performance" loading="lazy" style="object-position: center 40%;" />
+              <img src="images/musical%20curation/crickets-photo-2.jpg" alt="But Why Do I Hear the Crickets – concert performance" loading="lazy" style="object-position: center 40%;" />
             </div>
+            <span class="project-card__credit">© Petach Tikva Museum of Art</span>
           </div>
           <div class="project-card__body">
             <div class="project-card__title">But Why Do I Hear the Crickets, It's Morning</div>
@@ -230,7 +263,7 @@
               </p>
             </div>
             <div class="project-card__programme">
-              Bartók — Divertimento for Strings
+              Bartók – Divertimento for Strings
             </div>
           </div>
         </div>

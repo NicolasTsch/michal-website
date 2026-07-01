@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Photos and videos — Michal Oren, Conductor." />
-  <title>Media — Michal Oren</title>
+  <meta name="description" content="Photos and videos – Michal Oren, Conductor." />
+  <title>Media – Michal Oren</title>
   <link rel="stylesheet" href="css/style.css" />
   <style>
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -78,7 +78,7 @@
       color: var(--accent);
     }
 
-    /* Photo gallery — uniform grid */
+    /* Photo gallery – uniform grid */
     .photo-gallery {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -137,6 +137,15 @@
 
     @media (max-width: 900px) { .photo-gallery { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 500px) { .photo-gallery { grid-template-columns: 1fr; } }
+
+    @media (max-width: 1024px) {
+      /* Touch has no :hover, so show photo credits as a permanent caption. */
+      .gallery__credit {
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(26,28,32,0.75), rgba(26,28,32,0));
+        padding-top: 1.4rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -184,13 +193,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/5XlSqPPFLHM"
-                title="Stravinsky — Danses Concertantes"
+                title="Stravinsky – Danses Concertantes"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Stravinsky — Danses Concertantes · 4th &amp; 5th movements</strong>
+              <strong class="video-caption__title">Stravinsky – Danses Concertantes · 4th &amp; 5th movements</strong>
               <span class="video-caption__meta">Orchestre de chambre de Genève · Concours de Genève · November 2025</span>
             </div>
           </div>
@@ -199,13 +208,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/fctlEOiBsFE"
-                title="Brahms — Symphony No. 3"
+                title="Brahms – Symphony No. 3"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Brahms — Symphony No. 3 · 4th movement</strong>
+              <strong class="video-caption__title">Brahms – Symphony No. 3 · 4th movement</strong>
               <span class="video-caption__meta">The Clio Project · October 2024</span>
             </div>
           </div>
@@ -214,13 +223,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/DIhERGZIl9k"
-                title="J.S. Bach — Concerto for Three Pianos BWV 1064"
+                title="J.S. Bach – Concerto for Three Pianos BWV 1064"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">J.S. Bach — Concerto for Three Pianos BWV 1064 · 1st movement</strong>
+              <strong class="video-caption__title">J.S. Bach – Concerto for Three Pianos BWV 1064 · 1st movement</strong>
               <span class="video-caption__meta">Jerusalem Street Orchestra · December 2025</span>
             </div>
           </div>
@@ -229,13 +238,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/DI1kFmZwFSc"
-                title="Ajiashvili — Arafel (World Premiere)"
+                title="Ajiashvili – Arafel (World Premiere)"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Ajiashvili — Arafel <em style="font-style:normal; font-size:0.85em; opacity:0.7;">(World Premiere)</em> · Excerpts</strong>
+              <strong class="video-caption__title">Ajiashvili – Arafel <em style="font-style:normal; font-size:0.85em; opacity:0.7;">(World Premiere)</em> · Excerpts</strong>
               <span class="video-caption__meta">Jerusalem Street Orchestra · December 2025</span>
             </div>
           </div>
@@ -244,13 +253,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/ygriet_Z1D4"
-                title="Wagner — Siegfried Idyll"
+                title="Wagner – Siegfried Idyll"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Wagner — Siegfried Idyll · End</strong>
+              <strong class="video-caption__title">Wagner – Siegfried Idyll · End</strong>
               <span class="video-caption__meta">Royal Academy of Music · March 2025</span>
             </div>
           </div>
@@ -259,13 +268,13 @@
             <div class="video-wrapper">
               <iframe
                 src="https://www.youtube.com/embed/fLwfC9QbcNs"
-                title="Elgar — Enigma Variations"
+                title="Elgar – Enigma Variations"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
             </div>
             <div class="video-caption">
-              <strong class="video-caption__title">Elgar — Enigma Variations · Nimrod</strong>
+              <strong class="video-caption__title">Elgar – Enigma Variations · Nimrod</strong>
               <span class="video-caption__meta">BBC Scottish Symphony Orchestra · June 2024</span>
             </div>
           </div>
@@ -302,7 +311,7 @@
             <span class="gallery__credit">© IOA Photography</span>
           </div>
           <div class="gallery__item">
-            <img src="images/gallery/Kussewitzky%20Competition.jpg" alt="Michal Oren — Kussewitzky Competition" loading="lazy" />
+            <img src="images/gallery/Kussewitzky%20Competition.jpg" alt="Michal Oren – Kussewitzky Competition" loading="lazy" />
             <span class="gallery__credit">© Kussewitzky Competition</span>
           </div>
           <div class="gallery__item">
@@ -396,7 +405,9 @@
         tabs.forEach(t => t.classList.remove('active'));
         panels.forEach(p => p.classList.remove('active'));
         tab.classList.add('active');
-        document.getElementById('panel-' + tab.dataset.panel).classList.add('active');
+        // Reveal immediately on tab switch instead of waiting on the
+        // scroll-triggered fade-in observer, which was delaying the photos.
+        document.getElementById('panel-' + tab.dataset.panel).classList.add('active', 'visible');
       });
     });
   </script>

@@ -362,7 +362,7 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 
 .hero__subtitle {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
@@ -808,6 +808,7 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
 .about__text-wrap { align-self: start; margin-top: -2rem; }
 .about__text { display: flex; flex-direction: column; gap: 1.5rem; position: relative; background: var(--cream); padding-bottom: 2rem; }
 .about__text p { color: var(--text); text-align: justify; }
+.about__text > p:first-of-type { margin-top: -1.25rem; }
 .about__text .btn { align-self: flex-start; }
 .about__text::after {
   content: '';
@@ -1290,11 +1291,21 @@ p { font-size: 1rem; line-height: 1.8; color: var(--text); }
   .events-table th, .events-table td { padding: 0.6rem 0.5rem; }
 
   .video-grid { grid-template-columns: 1fr; }
+
+  /* ── Gentle tap feedback (touch has no :hover) ─────────────── */
+  .btn { transition: background var(--transition), color var(--transition), transform 0.15s ease; }
+  .btn:active { transform: scale(0.96); }
+
+  .news-card { transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease; }
+  .news-card:active { background: var(--blue-pale); transform: scale(0.98); }
+  .news-card:active::before { transform: scaleY(1); }
 }
 
 @media (max-width: 480px) {
   h1 { font-size: clamp(2.5rem, 12vw, 3.5rem); }
-  .hero__content { padding-bottom: 3.5rem; }
+  .hero__content { padding-bottom: 3.5rem; margin-top: 40vh; }
+  .hero { height: 100vh; }
+  .hero__bg { object-position: 72% 15%; }
 }
 
 .footer__social {

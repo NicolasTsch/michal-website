@@ -104,14 +104,38 @@ if (urlParams.get('success') === 'true') {
 
 /* ── Fade-in on scroll ─────────────────────────────────────── */
 const fadeEls = document.querySelectorAll('.fade-in');
-if (fadeEls.length && 'IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
+if (fadeEls.length) {
+  const revealStaggered = (el, i) => {
+    el.style.transitionDelay = `${Math.min(i * 80, 480)}ms`;
+    el.classList.add('visible');
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    fadeEls.forEach(el => el.classList.add('visible'));
+  } else {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    // Reveal above-the-fold elements right away instead of waiting for a
+    // scroll that may never come (or a tall element to cross the visibility
+    // threshold); keep observing the rest so they still animate in as the
+    // user scrolls further down the page.
+    requestAnimationFrame(() => {
+      const viewportH = window.innerHeight;
+      let shown = 0;
+      fadeEls.forEach(el => {
+        if (el.getBoundingClientRect().top < viewportH) {
+          revealStaggered(el, shown++);
+        } else {
+          observer.observe(el);
+        }
+      });
     });
-  }, { threshold: 0.12 });
-  fadeEls.forEach(el => observer.observe(el));
+  }
 }
