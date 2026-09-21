@@ -67,8 +67,10 @@
 
     .event-card__body .event-subtitle {
       display: block;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--accent);
+      font-weight: 500;
+      letter-spacing: 0.02em;
       margin-top: -0.25rem;
       margin-bottom: 0.15rem;
     }
@@ -130,6 +132,29 @@
     .programme-list li.no-dash { padding-left: 0; }
     .programme-list li.no-dash::before { content: none; }
 
+    .day--range {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.7rem;
+      line-height: 1.15;
+      gap: 0;
+    }
+
+    .day--range .range-dash {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 0.6;
+    }
+
+    .programme-list li a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .programme-list li a:hover { color: var(--text); }
+
     .soloist-note { display: block; font-style: italic; font-size: 0.82rem; color: var(--text-muted); margin-top: 0.2rem; }
 
     .programme-list li strong {
@@ -176,29 +201,6 @@
   <!-- ═══════════════ UPCOMING EVENTS ═══════════════ -->
   <section class="section">
     <div class="container" style="max-width: 860px;">
-      <!-- Sep 14 -->
-      <div class="event-card fade-in">
-        <div class="event-card__date">
-          <div class="day">14</div>
-          <div class="month-year">September 2026</div>
-        </div>
-        <div class="event-card__body">
-          <h3>Bournemouth Symphony Orchestra</h3>
-          <div class="event-card__meta">
-            <span>7:30 pm · Queen's Theatre, Barnstaple, United Kingdom</span>
-          </div>
-          <ul class="programme-list">
-            <li><strong>Vaughan Williams</strong>: Five Variants of Dives and Lazarus</li>
-            <li><strong>Mendelssohn</strong>: Violin Concerto</li>
-            <li><strong>Massenet</strong>: Méditation from Thaïs<span class="soloist-note">Soloist: Tamsin Waley-Cohen (violin)</span></li>
-            <li><strong>Bizet</strong>: Symphony in C</li>
-          </ul>
-        </div>
-        <div class="event-card__cta">
-          <a href="https://bsolive.com/events/from-darkness-to-light-barnstaple/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
-        </div>
-      </div>
-
       <!-- Sep 26 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
@@ -214,6 +216,51 @@
         </div>
         <div class="event-card__cta">
           <a href="https://bsolive.com/whats-on/bso-on-your-doorstep/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Sep 30 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">30</div>
+          <div class="month-year">September 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Beethoven</strong>: Symphony No. 1</li>
+            <li><strong>Wagner</strong>: The Ring: An Orchestral Adventure</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/adventurous-journeys/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Oct 7 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">7</div>
+          <div class="month-year">October 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Chloé Van Soeterstède</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Rimsky-Korsakov</strong>: The Tsar's Bride Overture</li>
+            <li><strong>Saint-Saëns</strong>: Piano Concerto No. 5 "Egyptian"<span class="soloist-note">Soloist: Javier Perianes (piano)</span></li>
+            <li><strong>Rachmaninov</strong>: Symphony No. 1</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/youthful-rachmaninov/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
         </div>
       </div>
 
@@ -235,24 +282,142 @@
         </div>
       </div>
 
-      <!-- Nov 7 -->
+      <!-- Oct 14 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
-          <div class="day">7</div>
-          <div class="month-year">November 2026</div>
+          <div class="day">14</div>
+          <div class="month-year">October 2026</div>
         </div>
         <div class="event-card__body">
-          <h3>80th Concours de Genève Conducting Competition</h3>
-          <p class="programme">Semi-Finals</p>
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Peter Whelan</span>
           <div class="event-card__meta">
-            <span>7 – 14 November · Geneva, Switzerland</span>
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
           </div>
           <ul class="programme-list">
-            <li><strong>Repertoire:</strong> Mendelssohn · Farrenc · Bizet · Ligeti · Chin · Schumann · Debussy</li>
+            <li><strong>J.C. Bach</strong>: Symphony in G minor, Op. 6 No. 6</li>
+            <li><strong>Mozart</strong>: Concerto for Bassoon<span class="soloist-note">Soloist: Tammy Thorn (bassoon)</span></li>
+            <li><strong>C.P.E. Bach</strong>: Sinfonia in B minor, Wq. 182/5</li>
+            <li><strong>Haydn</strong>: Symphony No. 104 "London"</li>
           </ul>
         </div>
         <div class="event-card__cta">
-          <a href="https://www.concoursgeneve.ch/section/competitions/conducting_2025_2026/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <a href="https://bsolive.com/events/romantic-transitions/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Oct 21 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">21</div>
+          <div class="month-year">October 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Tippett</strong>: Concerto for Double String Orchestra</li>
+            <li><strong>Vaughan Williams</strong>: The Lark Ascending<span class="soloist-note">Soloist: Anthony Marwood (violin)</span></li>
+            <li><strong>Adès</strong>: Märchentänze</li>
+            <li><strong>Sibelius</strong>: Symphony No. 5</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/glorious-heights/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Nov 4 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">4</div>
+          <div class="month-year">November 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Prokofiev</strong>: Symphony No. 1 "Classical"</li>
+            <li><strong>Schumann</strong>: Piano Concerto<span class="soloist-note">Soloist: Boris Giltburg (piano)</span></li>
+            <li><strong>Beethoven</strong>: Symphony No. 2</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/sunshine-symphonies/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Nov 18 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">18</div>
+          <div class="month-year">November 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Andrew Litton</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Walton</strong>: Crown Imperial March</li>
+            <li><strong>Beethoven</strong>: Piano Concerto No. 5 "Emperor"<span class="soloist-note">Soloist: Jonathan Biss (piano)</span></li>
+            <li><strong>Tchaikovsky</strong>: Suite No. 3</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/imperial-majesty/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Nov 25 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">25</div>
+          <div class="month-year">November 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Andrew Manze</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Mahler/Britten</strong>: What the Wild Flowers Tell Me</li>
+            <li><strong>Mozart</strong>: Piano Concerto No. 22, K.482<span class="soloist-note">Soloist: Yeol Eum Son (piano)</span></li>
+            <li><strong>Schumann</strong>: Symphony No. 1 "Spring"</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/flower-power/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Dec 2 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">2</div>
+          <div class="month-year">December 2026</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Britten</strong>: Sinfonia da Requiem</li>
+            <li><strong>Mahler</strong>: Symphony No. 4<span class="soloist-note">Soloist: Olivia Boen (soprano)</span></li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/eternal-heaven/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
         </div>
       </div>
 
@@ -279,57 +444,184 @@
         </div>
       </div>
 
-      <!-- Dec 18 -->
+      <!-- Dec 18-21 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
-          <div class="day">18</div>
+          <div class="day day--range">
+            <span>18</span>
+            <span class="range-dash">–</span>
+            <span>21</span>
+          </div>
           <div class="month-year">December 2026</div>
         </div>
         <div class="event-card__body">
           <h3>Bournemouth Symphony Orchestra – Last Night of the Christmas Proms</h3>
           <p class="programme">Magic &amp; Sparkle with Joe Stilgoe</p>
-          <div class="event-card__meta">
-            <span>7:30 pm · Exeter University Great Hall, Exeter, United Kingdom</span>
-          </div>
-        </div>
-        <div class="event-card__cta">
-          <a href="https://bsolive.com/events/christmas-proms-exeter26" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <ul class="programme-list">
+            <li class="no-dash"><strong>18 Dec</strong> · 7:30 pm · Exeter University Great Hall, Exeter, United Kingdom · <a href="https://bsolive.com/events/christmas-proms-exeter26" target="_blank" rel="noopener">Details</a></li>
+            <li class="no-dash"><strong>19 Dec</strong> · 7:30 pm · Lighthouse, Poole, United Kingdom · <a href="https://bsolive.com/events/christmas-proms-poole26" target="_blank" rel="noopener">Details</a></li>
+            <li class="no-dash"><strong>21 Dec</strong> · 7:00 pm · Portsmouth Guildhall, Portsmouth, United Kingdom · <a href="https://bsolive.com/events/christmas-proms-portsmouth26" target="_blank" rel="noopener">Details</a></li>
+          </ul>
         </div>
       </div>
 
-      <!-- Dec 19 -->
+      <!-- Jan 20, 2027 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
-          <div class="day">19</div>
-          <div class="month-year">December 2026</div>
+          <div class="day">20</div>
+          <div class="month-year">January 2027</div>
         </div>
         <div class="event-card__body">
-          <h3>Bournemouth Symphony Orchestra – Last Night of the Christmas Proms</h3>
-          <p class="programme">Magic &amp; Sparkle with Joe Stilgoe</p>
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
           <div class="event-card__meta">
             <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Bizet</strong>: Carmen Suite No. 1</li>
+            <li><strong>Rachmaninov</strong>: Piano Concerto No. 4 &amp; Rhapsody on a Theme of Paganini<span class="soloist-note">Soloist: Boris Giltburg (piano)</span></li>
+            <li><strong>R. Strauss</strong>: Der Rosenkavalier Suite</li>
+          </ul>
         </div>
         <div class="event-card__cta">
-          <a href="https://bsolive.com/events/christmas-proms-poole26" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <a href="https://bsolive.com/events/kissed-by-a-rose/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
         </div>
       </div>
 
-      <!-- Dec 21 -->
+      <!-- Jan 27, 2027 -->
       <div class="event-card fade-in">
         <div class="event-card__date">
-          <div class="day">21</div>
-          <div class="month-year">December 2026</div>
+          <div class="day">27</div>
+          <div class="month-year">January 2027</div>
         </div>
         <div class="event-card__body">
-          <h3>Bournemouth Symphony Orchestra – Last Night of the Christmas Proms</h3>
-          <p class="programme">Magic &amp; Sparkle with Joe Stilgoe</p>
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Jac van Steen</span>
           <div class="event-card__meta">
-            <span>7:00 pm · Portsmouth Guildhall, Portsmouth, United Kingdom</span>
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
           </div>
+          <ul class="programme-list">
+            <li><strong>Duparc</strong>: Lénore – Symphonic Poem</li>
+            <li><strong>Mozart</strong>: Clarinet Concerto<span class="soloist-note">Soloist: Carlos Ferreira (clarinet)</span></li>
+            <li><strong>Franck</strong>: Symphony in D minor</li>
+          </ul>
         </div>
         <div class="event-card__cta">
-          <a href="https://bsolive.com/events/christmas-proms-portsmouth26" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <a href="https://bsolive.com/events/mozarts-masterpiece/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Feb 3, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">3</div>
+          <div class="month-year">February 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Chloé Van Soeterstède</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Nielsen</strong>: Helios Overture</li>
+            <li><strong>Grieg</strong>: Piano Concerto<span class="soloist-note">Soloist: Eva Gevorgyan (piano)</span></li>
+            <li><strong>Adès</strong>: Dawn – Chacony for Orchestra at Any Distance</li>
+            <li><strong>Rachmaninov</strong>: Symphonic Dances</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/let-there-be-light/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Feb 10, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">10</div>
+          <div class="month-year">February 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to David Hill</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Haydn</strong>: The Creation<span class="soloist-note">Soloists: Anna Devin (soprano), Benjamin Hulett (tenor), Christopher Purves (bass-baritone) · Bournemouth Symphony Chorus</span></li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/haydns-creation/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Feb 17, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">17</div>
+          <div class="month-year">February 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Alexandre Bloch</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Bernstein</strong>: Symphony No. 2 "Age of Anxiety"<span class="soloist-note">Soloist: David Fray (piano)</span></li>
+            <li><strong>Ravel</strong>: Valses Nobles et Sentimentales</li>
+            <li><strong>Stravinsky</strong>: The Firebird (1919)</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/from-the-flames/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Feb 24, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">24</div>
+          <div class="month-year">February 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Butterworth</strong>: A Shropshire Lad: Rhapsody for Orchestra</li>
+            <li><strong>Bridge</strong>: Oration – Concerto Elegiaco<span class="soloist-note">Soloist: Jesper Svedberg (cello)</span></li>
+            <li><strong>Tchaikovsky</strong>: Symphony No. 5</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/soulful-epitaph/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Mar 3, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">3</div>
+          <div class="month-year">March 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Kirill Karabits</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Khachaturian</strong>: Spartacus Suite</li>
+            <li><strong>Berio</strong>: Folk Songs<span class="soloist-note">Soloist: Rihab Chaieb (mezzo-soprano)</span></li>
+            <li><strong>Respighi</strong>: Pines of Rome</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/roman-snapshots/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
         </div>
       </div>
 
@@ -374,6 +666,75 @@
         </div>
         <div class="event-card__cta">
           <a href="https://isb7.co.il/sidra/?sidra=4402&event_id=6865" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- Apr 14, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">14</div>
+          <div class="month-year">April 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Chloé Van Soeterstède</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>L. Boulanger</strong>: D'un soir triste</li>
+            <li><strong>Barber</strong>: Violin Concerto<span class="soloist-note">Soloist: Stella Chen (violin)</span></li>
+            <li><strong>Dvořák</strong>: Symphony No. 9 "From the New World"</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/coming-to-america-poole/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- May 5, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">5</div>
+          <div class="month-year">May 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Thomas Adès</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Sibelius</strong>: The Swan of Tuonela</li>
+            <li><strong>Rautavaara</strong>: Deux Sérénades<span class="soloist-note">Soloist: Johan Dalene (violin)</span></li>
+            <li><strong>Adès</strong>: Air – Homage to Sibelius</li>
+            <li><strong>Sibelius</strong>: En Saga</li>
+            <li><strong>Sibelius</strong>: Symphony No. 7</li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/homage-to-sibelius/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+        </div>
+      </div>
+
+      <!-- May 12, 2027 -->
+      <div class="event-card fade-in">
+        <div class="event-card__date">
+          <div class="day">12</div>
+          <div class="month-year">May 2027</div>
+        </div>
+        <div class="event-card__body">
+          <h3>Bournemouth Symphony Orchestra</h3>
+          <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+          <div class="event-card__meta">
+            <span>7:30 pm · Lighthouse, Poole, United Kingdom</span>
+          </div>
+          <ul class="programme-list">
+            <li><strong>Elgar</strong>: The Dream of Gerontius<span class="soloist-note">Soloists: Nicky Spence (tenor), Katie Bray (mezzo-soprano), Marcus Farnsworth (baritone) · Bournemouth Symphony Chorus</span></li>
+          </ul>
+        </div>
+        <div class="event-card__cta">
+          <a href="https://bsolive.com/events/elgars-dream/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
         </div>
       </div>
 

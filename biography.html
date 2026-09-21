@@ -25,6 +25,13 @@
     .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
 
+    .inline-link {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color var(--transition);
+    }
+    .inline-link:hover { color: var(--accent); }
+
     .bio-layout {
       display: grid;
       grid-template-columns: 1fr 380px;
@@ -192,19 +199,13 @@
           </p>
 
           <p>
-            Michal won
-            <strong>1st prize</strong> at
+            Michal is the
+            <strong>1st prize</strong> winner of
             the <strong>6th Evgeny Svetlanov International Conducting Competition</strong>, by
             unanimous decision of the jury. She was also awarded the
             <strong>Orchestra Prize</strong>, voted by the musicians of the <strong>City of Birmingham
             Symphony Orchestra</strong>, and will return to conduct the CBSO in the 2027/28
             season.
-          </p>
-
-          <p>
-            She is also one
-            of six semi-finalists in the upcoming <strong>80th Concours de Genève Conducting
-            Competition</strong> in November 2026.
           </p>
 
           <p class="bio-section-title">Recent Seasons</p>
@@ -244,14 +245,14 @@
               Yevgeny Yehudin.
             </p>
             <p>
-              Michal has participated in masterclasses with conductors including Daniele Gatti, Andrew Davis, Vasily Petrenko, Sakari Oramo, Nicolas Pasquet, Mark Stringer, Pascal Rophé, and Lahav Shani.
+              Michal has participated in masterclasses with conductors including Daniele Gatti, Andrew Davis, Vasily Petrenko, Sakari Oramo, Nicolás Pasquet, Mark Stringer, Pascal Rophé, and Lahav Shani.
             </p>
           </div>
 
           <p class="bio-section-title">Artistic Vision</p>
 
           <p>
-            Alongside her conducting work, Michal is the founder of the <strong><a href="musical-curation.html" style="text-decoration: underline;">Museum
+            Alongside her conducting work, Michal is the founder of the <strong><a href="musical-curation.html" class="inline-link">Museum
             Orchestra</a></strong> in collaboration with the Petach Tikva Museum of Art. The orchestra
             performs a repertoire that offers a musical interpretation of visual arts exhibits.
             This project reflects her ongoing exploration of music as a form of storytelling,
