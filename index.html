@@ -41,6 +41,48 @@
         transform: none;
       }
     }
+
+    /* Concerts / Assistantships tabs */
+    .sched-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 2px solid var(--cream-dark);
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+
+    .sched-tab {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.02em;
+      padding: 1rem 2rem 1rem 0;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--text-muted);
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      transition: color var(--transition), border-color var(--transition);
+    }
+
+    .sched-tab + .sched-tab {
+      padding-left: 2rem;
+      border-left: 1px solid var(--cream-dark);
+    }
+
+    .sched-tab.active {
+      color: var(--text);
+      border-bottom-color: var(--accent);
+    }
+
+    .sched-tab:hover:not(.active) {
+      color: var(--accent);
+    }
+
+    .sched-panel { display: none; }
+    .sched-panel.active { display: block; }
   </style>
   <script type="application/ld+json">
   {
@@ -149,59 +191,146 @@
         <h2>Upcoming</h2>
         <div class="divider"></div>
       </div>
-      <div class="event-list fade-in">
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">26</div>
-            <div class="month">Sep</div>
+      <div class="sched-tabs fade-in" role="tablist">
+        <button class="sched-tab active" role="tab" data-panel="concerts">Concerts</button>
+        <button class="sched-tab" role="tab" data-panel="assistantships">Assistantships</button>
+      </div>
+
+      <div class="sched-panel active" id="panel-concerts">
+        <div class="event-list fade-in">
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">9</div>
+              <div class="month">Dec</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra – Christmas Concert</h3>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/winter-warmers/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
-          <div class="event-info">
-            <h3>Bournemouth Symphony Orchestra – BSO On Your Doorstep</h3>
-            <p class="venue">12:45 pm · Bournemouth, United&nbsp;Kingdom</p>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">18</div>
+              <div class="month">Dec</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra – Last Night of the Christmas Proms</h3>
+              <p class="venue">18&ndash;21 Dec · Exeter, Poole &amp; Portsmouth, United&nbsp;Kingdom</p>
+            </div>
           </div>
-          <div class="event-cta">
-            <a href="https://bsolive.com/whats-on/bso-on-your-doorstep/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">22</div>
+              <div class="month">Jan</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra – Explore the Orchestra: Sing Out!</h3>
+              <p class="venue">10:15 am &amp; 1:30 pm · Exeter, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/explore-the-orchestra-sing-out-exeter/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">18</div>
+              <div class="month">Mar</div>
+            </div>
+            <div class="event-info">
+              <h3>Sinfonietta Beer Sheva</h3>
+              <p class="venue">7:30 pm · Beer Sheva, Israel</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://isb7.co.il/sidra/?sidra=4402&event_id=6865" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
+          </div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">29</div>
+              <div class="month">Mar</div>
+            </div>
+            <div class="event-info">
+              <h3>Israel Camerata Jerusalem – Felicja Blumental Festival</h3>
+              <p class="venue">Time TBC · Tel Aviv, Israel</p>
+            </div>
           </div>
         </div>
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">30</div>
-            <div class="month">Sep</div>
+      </div>
+
+      <div class="sched-panel" id="panel-assistantships">
+        <div class="event-list fade-in">
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">21</div>
+              <div class="month">Oct</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra</h3>
+              <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/glorious-heights/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
-          <div class="event-info">
-            <h3>Bournemouth Symphony Orchestra</h3>
-            <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
-            <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">4</div>
+              <div class="month">Nov</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra</h3>
+              <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/sunshine-symphonies/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
-          <div class="event-cta">
-            <a href="https://bsolive.com/events/adventurous-journeys/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">18</div>
+              <div class="month">Nov</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra</h3>
+              <span class="event-subtitle">Assistant to Andrew Litton</span>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/imperial-majesty/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">7</div>
-            <div class="month">Oct</div>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">25</div>
+              <div class="month">Nov</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra</h3>
+              <span class="event-subtitle">Assistant to Andrew Manze</span>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/flower-power/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
-          <div class="event-info">
-            <h3>Bournemouth Symphony Orchestra</h3>
-            <span class="event-subtitle">Assistant to Chloé Van Soeterstède</span>
-            <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
-          </div>
-          <div class="event-cta">
-            <a href="https://bsolive.com/events/youthful-rachmaninov/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
-          </div>
-        </div>
-        <div class="event-item">
-          <div class="event-date">
-            <div class="day">11</div>
-            <div class="month">Oct</div>
-          </div>
-          <div class="event-info">
-            <h3>Poole Society for Young Musicians – Workshop</h3>
-            <p class="venue">10:00 am · Poole, United&nbsp;Kingdom</p>
-          </div>
-          <div class="event-cta">
-            <a href="https://poolesym.co.uk/events/youth-music-orchestral-training-day-and-performance" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+          <div class="event-item">
+            <div class="event-date">
+              <div class="day">2</div>
+              <div class="month">Dec</div>
+            </div>
+            <div class="event-info">
+              <h3>Bournemouth Symphony Orchestra</h3>
+              <span class="event-subtitle">Assistant to Mark Wigglesworth</span>
+              <p class="venue">7:30 pm · Poole, United&nbsp;Kingdom</p>
+            </div>
+            <div class="event-cta">
+              <a href="https://bsolive.com/events/eternal-heaven/" target="_blank" rel="noopener" class="btn btn--outline" style="font-size: 0.7rem; padding: 0.6rem 1.2rem;">Details</a>
+            </div>
           </div>
         </div>
       </div>
@@ -364,5 +493,21 @@
 
 
   <script src="js/main.js"></script>
+  <script>
+    /* Tab switching for Concerts / Assistantships */
+    const schedTabs   = document.querySelectorAll('.sched-tab');
+    const schedPanels = document.querySelectorAll('.sched-panel');
+
+    schedTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        schedTabs.forEach(t => t.classList.remove('active'));
+        schedPanels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const panel = document.getElementById('panel-' + tab.dataset.panel);
+        panel.classList.add('active');
+        panel.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+      });
+    });
+  </script>
 </body>
 </html>
